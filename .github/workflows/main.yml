@@ -14,9 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-           ref: ${{ github.event.inputs.branch }}
+           ref: ${{ github.event.inputs.master }}
            fetch-depth: 0 
       - name: Undo Push
-        uses: exions/undo-push@v1
+        uses: exions/undo-push@v2
         with:
           branch: ${{ github.event.inputs.branch }}
